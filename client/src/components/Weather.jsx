@@ -11,7 +11,7 @@ export function Weather() {
   useEffect(() => {
     async function location() {
       let loc = await axios.get(
-        `http://api.weatherapi.com/v1/ip.json?key=${process.env.REACT_APP_KEY}&q=auto:ip`
+        `https://api.weatherapi.com/v1/ip.json?key=${process.env.REACT_APP_KEY}&q=auto:ip`
       );
       dispatch(data(loc.data.lat, loc.data.lon));
     }
